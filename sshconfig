@@ -1,0 +1,36 @@
+Host bastionET2598
+  User ubuntu
+  HostName 188.95.231.23
+  IdentityFile ~/.ssh/id_rsa
+  UserKnownHostsFile=~/dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+
+Host devhaproxy
+  User ubuntu
+  HostName 188.95.231.163
+  IdentityFile ~/.ssh/id_rsa
+  UserKnownHostsFile=~/dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+
+Host devA
+  User ubuntu
+  HostName 10.1.0.161
+  ProxyJump bastionET2598
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+
+Host devB
+  User ubuntu
+  HostName 10.1.0.73
+  ProxyJump bastionET2598
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+
+Host devC
+  User ubuntu
+  HostName 10.1.0.132
+  ProxyJump bastionET2598
+  StrictHostKeyChecking no
+  PasswordAuthentication no

@@ -1,0 +1,13 @@
+[haproxy] 
+devhaproxy 
+
+[webservers] 
+devA 
+devB 
+devC 
+
+[bastion]
+bastionET2598
+
+[all:vars] 
+ansible_user=ubuntu 
