@@ -5,7 +5,6 @@
 
 - hosts: haproxy
   become: yes
-  gather_facts: yes
   tasks:
     - name: installing haproxy
       apt:
